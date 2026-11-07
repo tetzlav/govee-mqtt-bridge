@@ -1,0 +1,25 @@
+# Bestehende Installation und Diagnose-Dateien im Projektstamm
+/bin/
+/include/
+/lib/
+/lib64
+/pyvenv.cfg
+/govee_mqtt_bridge.py
+/govee_mqtt_bridge_*.py
+/test_inspect.py
+
+# Lokale Python-Umgebungen und generierte Dateien
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+
+# Zugangsdaten und lokale Konfiguration
+.env
+.env.*
+secrets/
+*.secrets
+*.pem
+*.key
