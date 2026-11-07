@@ -79,9 +79,9 @@ Die Bridge initialisiert die Befehlstopics für ioBroker mit `{}` ohne Retain-Fl
 
 | Paket | Aufgabe |
 | --- | --- |
-| `govee-local-api` | Erkennt Govee-Geräte im LAN und sendet Befehle. Die Datei legt einen Git-Commit fest. |
-| `asyncio-mqtt` | Stellt die asynchrone Verbindung zum MQTT-Broker bereit. |
-| `paho-mqtt` | MQTT-Client unterhalb von `asyncio-mqtt`. Die aktuelle Bridge verwendet die in der Datei festgelegte 1.x-Version. |
+| [`govee-local-api`](https://github.com/Galorhallen/govee-local-api) | Erkennt Govee-Geräte im LAN und sendet Befehle. Die Datei legt einen Git-Commit fest. |
+| [`asyncio-mqtt`](https://pypi.org/project/asyncio-mqtt/0.16.2/) | Stellt die asynchrone Verbindung zum MQTT-Broker bereit. |
+| [`paho-mqtt`](https://pypi.org/project/paho-mqtt/1.6.1/) | MQTT-Client unterhalb von `asyncio-mqtt`. Die aktuelle Bridge verwendet die in der Datei festgelegte 1.x-Version. |
 
 Zum Aktualisieren die betreffende Versionsnummer oder bei `govee-local-api` den vollständigen Git-Commit in `requirements.txt` ändern. Prüfe Änderungen an `asyncio-mqtt` und `paho-mqtt` gemeinsam, insbesondere bei einem Wechsel der Hauptversion. Die in der Datei angegebenen Versionen sind verbindlich. Ein Aufruf mit `--upgrade` allein ändert diese Festlegungen nicht.
 
