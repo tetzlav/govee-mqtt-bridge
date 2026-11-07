@@ -1,0 +1,21 @@
+[Unit]
+Description=Govee Local MQTT Bridge
+Wants=network-online.target iobroker.service
+After=network-online.target iobroker.service
+
+[Service]
+Type=simple
+User=as
+Group=as
+WorkingDirectory=/opt/govee-bridge
+EnvironmentFile=/etc/govee-bridge/mqtt.env
+ExecStart=/opt/govee-bridge/.venv/bin/python -u /opt/govee-bridge/bridge/govee_mqtt_bridge.py
+StandardOutput=journal
+StandardError=journal
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGINT
+TimeoutStopSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -6,6 +6,8 @@ Die Bridge verbindet den MQTT-Adapter in ioBroker mit Govee-Leuchten im lokalen 
 
 Das Git-Repository liegt unter `/opt/govee-bridge`. Die versionierte Fassung steht in `bridge/govee_mqtt_bridge.py`. Der produktive Dienst `govee-mqtt-bridge.service` verwendet weiterhin das bestehende Skript im Projektstamm und die dort installierte Python-Umgebung. Die Aktivierung der versionierten Fassung ist ein separater Schritt.
 
+Die [Betriebsanleitung](docs/betrieb.md) enthält die Voraussetzungen, Einrichtung, Aktivierung und Rückkehr zur bisherigen Installation. Die [systemd-Vorlage](systemd/govee-mqtt-bridge.service) und die [MQTT-Konfigurationsvorlage](systemd/mqtt.env.example) liegen im Repository.
+
 ## Entwicklung und Tests
 
 Für eine frische Entwicklungsumgebung mit Python 3.11 und Git:
